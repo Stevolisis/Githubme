@@ -1,5 +1,25 @@
-*
-{
+
+.on{
+  display: block;
+  width: 65%;
+  padding:0 ;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: black;
+margin: auto;
+margin-top: 10px;
+  background-color: orangered;
+  border: 2px solid gray;
+  border-radius: 4px;
+  border: 2px solid  rgb(206, 212, 218);
+margin-bottom: 20px;
+text-align: center;
+}
+
+.on:hover{
+  background: Lightblue;
+}
+*{
   scroll-behavior:smooth;
 }
 header{
@@ -33,7 +53,7 @@ background-size: cover;
   color: #fff;
     transition: 0.5s;
   transition-property:  background;
-
+cursor: pointer;
 }
 .logout_btn:hover{
   background: #E87E95;
@@ -50,40 +70,22 @@ color:#404;
   font-size: 30px;
   padding-left: 5px;
 margin: 0;
+padding-top: 11px;
 }
-#gg span{
-  color: white;
-}
+
 #dd ol{
-padding-bottom: 0.7em; padding-top:0.7em;  margin: 0;
-  font-size: 90%; text-align: right;
-
-
+  padding-bottom: 1.5em; padding-top:1.5em;  margin: 0;
+    font-size: 90%; text-align: right;
 }
  #dd li{
-  margin-left: 1em; border-left: 1px solid #DD0;
-  display: inline; padding-left: 2em; padding-right: 1em;
+  margin-left: 1em;
+  display: inline; padding-left: 2em; padding-right: 0.5rem;
 }
- #dd li a:link,#sitenav li a:visited{
-  color: black; text-decoration: none;
-}
- #dd li:first-child{
-  padding-left: 0; border-left: none;
-  margin-left: 0;
-}
- #dd li:last-child{
-padding-right: 1em;
-  margin-left: 0;
-}
- #dd li a:hover{
 
-  color:#DDDD00;
-}
 #dd{
   position:static;
   margin: 0;
   background-color: #E87E95;
-
 }
 
 footer{
@@ -99,10 +101,9 @@ footer p a:link,footer p a:visited{
   color: #DDDD00;
 }
 blockquote{
-  font-size: 40px;
+  font-size: 35px;
   margin: 0;
-  padding-top: 60px;
-  padding-left: 2em;
+  padding-top: 67px;
   font-style: italic;
 }
 
@@ -130,7 +131,7 @@ margin-top: 0;
   text-align: center;
   border: 1PX solid black;
 background-color:#E87E95;
-margin-top: 10px;
+margin-top: 50px;
 opacity: 0.8;
 z-index: 0;
 
@@ -205,7 +206,7 @@ float: left;
 .control-label2{
 float: left;
 }
-.submit{
+.submit2{
   display: block;
   width: 60%;
   padding: 0.375rem 0.75rem;
@@ -239,6 +240,8 @@ top: 15px;
   border: 1PX solid black;
   background:radial-gradient(circle,Blue,#FF6347,#055,#FF6347);
   opacity: 0.8;
+  margin-top: 50px;
+
 }
 .signhr{
   width:280px;
@@ -275,44 +278,7 @@ float: left;
 
    color:#DDDD00;
  }
-#sidehr{
-  font-family:sans-serif;
-  margin:80px auto;
-  text-align:center;
-  font-size:25px;
-  max-width:500px;
-  position:relative;
-  margin-bottom: 0;
-margin-top: 75px;
-color: black;
 
-}
-
-#sidehr h1:before{
-  content:"";
-  display:block;
-  width:200px;
-  height:2px;
-  position:absolute;
-  background:black;
-  left:-8vw;
-  top:50%;
-
-    z-index:-2;
-
-}
-#sidehr h1:after{
-
-  content:"";
-  display:block;
-  width:200px;
-  height:2px;
-  position:absolute;
-  background:black;
-    right:-8vw;
-  top:50%;
-  z-index:-2;
-}
 @font-face {
 font-family: BarowCondensed-Regular;
 src: url("CinzelDecorative-Bold.ttf");
@@ -321,127 +287,6 @@ src: url("CinzelDecorative-Bold.ttf");
 @font-face {
 font-family: BarlowCondensed-Regular;
 src: url("OpenSans-Regular.ttf");
-}
-.tt{
-  position: relative;
-  font-family:BarlowCondensed-Regular;
-  border-radius: 20%;
-  margin: auto;
-  padding: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
-  width:65vw;
-  padding: 20;
-  background-color: #E87E95;
-  text-align: center;
-  font-size: 20;
-  word-spacing: 5px;
-
-}
-.ttp{
-  font-family:BarlowCondensed-Regular;
-  border-radius: 20%;
-  margin: auto;
-  padding: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
-  width:65vw;
-  padding: 20;
-  background-color: #E87E95;
-  text-align: center;
-  font-size: 20;
-  word-spacing: 5px;
-}
-
-#sidehry{
-  font-family:sans-serif;
-  margin:80px auto;
-  text-align:center;
-  font-size:20px;
-  max-width:500px;
-  position:relative;
-  margin-bottom: 0;
-  color: black;
-
-}
-#sidehry h1:before{
-  content:"";
-  background:black;
-    display:block;
-  width:180px;
-  height:2px;
-  position:absolute;
-
-left:-8vw;
-  top:50%;
-    z-index:-2;
-}
-#sidehry h1:after{
-  content:"";
-  background:black;
-    display:block;
-  width:180px;
-  height:2px;
-  position:absolute;
-
-right:-8vw;
-  top:50%;
-  z-index:-2;
-}
-
-#sidehrz{
-  font-family:sans-serif;
-  margin:70px auto;
-  text-align:center;
-  font-size:20px;
-  max-width:500px;
-  position:relative;
-  margin-bottom: 0;
-  color: black;
-
-}
-#sidehrz h1:before{
-  content:"";
-  background:black;
-    display:block;
-  width:150px;
-    height:2px;
-  position:absolute;
-
-  left:-8vw;
-  top:50%;
-    z-index:-2;
-}
-#sidehrz h1:after{
-  content:"";
-  display:block;
-  background:black;
-    width:150px;
-  height:2px;
-  position:absolute;
-
-  right:-8vw;
-  top:50%;
-  z-index:-2;
-}
-span{
-
-  font-family: BarowCondensed-Regular;
-}
-
-.ted{
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1rem;
-  border-collapse: collapse;
-  box-sizing: border-box;
-  line-height: 1.67rem;
-  font-size: 1.1rem;
-  text-align: center;
-}
-.lpink{
-  background-color: gray;
-
 }
 .check{
   position: static;
@@ -456,7 +301,7 @@ span{
   color:#3B2F8E;
   background-color: inherit;
    font-family: serif;
-
+text-decoration: none;
 }
 #register:hover{
     color:#DDDD00;
@@ -467,74 +312,44 @@ span{
 #createspan:hover{
     color:#DDDD00;
 }
-
+tr{
+  width: 70vw;
+}
 
 @media only screen and (max-width:650px) {
   hr{
     display: block;
   }
-#dd li{
-margin-left: 0em;
-padding-left: 1em;
-text-align: center;
-}
 #dd ol{
   text-align: center;
-}
+  padding-bottom: 0.4em; padding-top:0.5em;  margin: 0;
+    font-size: 90%;
+  }
 #gg{
   text-align: center;
   position: relative;
-  padding-top: 13px;
-
+  padding-top: 27px;
 }
-#sidehr h1:before{
-  display:none;
-}
-#sidehr h1:after{
-  display:none;
-}
-#sidehry h1:before{
-  display:none;
-}
-#sidehry h1:after{
-  display:none;
-}
-#sidehrz h1:before{
-  display:none;
-}
-#sidehrz h1:after{
-  display:none;
-}
-
 hr{
   width: 60%;
   margin-top: 5px;
 }
-#dd{
-}
+
 .signin{
 z-index: 0;
   line-height: 1.5;
-  width: 260px;
+  width: 74vw;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-hr{
-}
 .signin2{
   z-index: 0;
     line-height: 1.5;
-    width: 260px;
+    width: 74vw;
     padding-left: 20px;
     padding-right: 20px;
 }
-.signhr{
-  width:210px;
-  display:block;
-
-}
-
 .form-control{
   display: block;
 margin-bottom: 0;
@@ -606,30 +421,15 @@ margin-bottom: 0;
 }
 
 blockquote{
-  font-size: 27px;
+  font-size: 24px;
   margin-left: 0;
-  padding-top: 100px;
+  padding-top: 110px;
 }
-#sitenav{
-}
-  .ttp{
-      text-align: left;
-        width: 77vw;
-        font-size: 20;
-    }
-    .tt{
-      width: 77vw;
-        font-size: 20;
-    }
     body{
       background-repeat: no-repeat;
 background-size: cover;
       background-attachment: fixed;
       height: 100%;
-}
-#sidehr{
-
-  position: relative;
 }
 .signin h1{
   font-size: 27px;
@@ -641,6 +441,12 @@ header{
   z-index: 2;
 
 }
+.signhr{
+  width:50vw;
+  display:block;
+
+}
+
 }
 /*
 

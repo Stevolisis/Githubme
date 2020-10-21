@@ -4,20 +4,27 @@ $('#Register').click(function () {
     $('.signin2').fadeIn(900);
   });
 });
+$('.logout_btn').click(function () {
+  $('.signin2').fadeOut(900,function () {
+    $('.signin').fadeIn(900);
+  });
+});
 //---------------------Fading Effect------------------------------------
 $('#create span').click(function () {
   $('.signin').fadeOut(900,function () {
     $('.signin2').fadeIn(900);
   });
-  //----------------------------Sign Up details------------------------------
-  const myform2=document.querySelector('#signnin2');
-  let nameinput2=document.querySelector('.form-controll');
-  let passwordinput2=document.querySelector('.form-controll2');
-  let emalinput=document.querySelector('.form-controll3');
 
-  myform2.addEventListener('submit',onSubmit);
-  function onSubmit(e) {
-    e.preventDefault();
+  //----------------------------Sign Up details------------------------------
+
+  //--------------------------------------------
+  $('.logout_btn').click(function () {
+    $('.signin2').fadeOut(900,function () {
+      $('.signin').fadeIn(900);
+    });
+  });
+  //--------------------------------------------------
+  function onSubmit() {
 
   if (nameinput2.value===''||passwordinput2.value===''
   ||emalinput.value==='') {
@@ -43,28 +50,8 @@ $("#sidehr span").after("<hr>");
 $("#sidehry span").after("<hr>");
 $("#sidehrz span").after("<hr>");
 //------------------------------------------------------------------
-const myform=document.querySelector('#signnin');
-let nameinput=document.querySelector('.form-control');
-let passwordinput=document.querySelector('.form-control2');
 
-myform.addEventListener('submit',onSubmit);
-function onSubmit(e) {
-  e.preventDefault();
 
-  if (nameinput.value===''||passwordinput.value==='') {
-    alert('Please enter all fields');
-  }
-else{
-const li=
-  {
-    username:`${nameinput.value}`,
-    password:`${passwordinput.value}`
-  };
-const todojson=JSON.stringify(li);
-console.log(todojson);
-nameinput.value='';
-passwordinput.value='';
-}};
 //-----------------------Smooth Scroll--------------------------
 $('header a').on('click',function (e) {
   if (this.hash !=='') {
@@ -75,6 +62,8 @@ $('header a').on('click',function (e) {
     },900);
   }
 });
+//---------------------------$.ajax API---------------------------
+
 
 
 

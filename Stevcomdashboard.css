@@ -330,7 +330,7 @@ footer p a:link,footer p a:visited{
   color: #DDDD00;
 }
 
-@media(max-width:760px) {
+@media only screen and (max-width:760px) {
   .Sidebar{
     left: -250px ;
   transition-property: left;

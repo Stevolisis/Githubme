@@ -1,10 +1,3 @@
-const myform2=document.querySelector('#ty');
-let phonenumber=document.querySelector('.form-control');
-let network=document.querySelector('#slct1');
-let databundle=document.querySelector('#slct2');
-
-//--------------------------------------------------------------
-
 function populate(s1,s2) {
   var s1=document.getElementById(s1);
   var s2=document.getElementById(s2);
@@ -21,7 +14,6 @@ if (s1.value=='MTN|1') {
     newOption.value=pair[0];
     newOption.innerHTML=pair[1];
     s2.options.add(newOption);
-
   }
   };
   function populate1(s1,s2) {

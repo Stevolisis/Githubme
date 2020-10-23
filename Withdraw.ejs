@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link id="pagestyle" rel='stylesheet'
+    type='text/css'href='Withdraw.css'>
+    <script src="jquery-3.5.1.js"></script>
+    <meta name="viewport"
+    content="width-device-width,initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="Sidebar_btn"></i>
+    </label>
+  <div class="left_area">
+    <h3><span>STEV</span>COM</h3>
+      </div>
+      <div class="right_area">
+        <a href="/logout" class="logout_btn">Logout</a>
+        </div>
+        </header>
+        <div class="Sidebar">
+          <center>
+            <div class="profile_image">
+              <i class="fas fa-user-circle fa-6x" class="profile_image1"></i>
+            </div>
+            <h4><%= vu.username %></h4><!--Stevolisis|| id:2345-->
+            </center>
+            <a href="/dashboard"><i class="fas fa-user-circle"></i><span>Dashboard</span></a>
+            <a href="/StevcomFundAccnt"><i class="fas fa-credit-card"></i><span>Fund account</span></a>
+            <a href="/StevcomDataOrder"><i class="fas fa-wifi"></i><span>Buy Data</span></a>
+            <a href="/StevcomAirtime"><i class="fas fa-phone-alt"></i><span>Buy Airtime</span></a>
+            <a href="/StevcomCableSub"><i class="fas fa-desktop"></i><span>Cable Subscription</span></a>
+            <a href="/transfer"><i class="fas fa-paper-plane"></i><span>Transfer to Others</span></a>
+            <a href="/withdraw"><i class="fas fa-money-bill-alt"></i><span>Withdraw/Transfer</span></a>
+            <a href="https://api.whatsapp.com/send?phone=23408103987495&text"><i class="fab fa-whatsapp fa-1x"></i><span>Customer Care</span></a>
+          </div>
+    <div class="hj">
+      <div class="data1"><br>
+        <span>NOTE:</span>To Widraw/transfer,you must have a
+        minimum of N150 in your main Account.<br>
+        *You can Only Withdraw N100 and Above.<br><hr>
+        You will be charged N30 for every Withdraw/transfer<br>
+        <hr>
+        *To withdraw Referral Bonuses you must push them to your main Account.Then use the withdraw/transfer box to withdraw.
+      </div>
+        <% if(vrt){ %>
+          <% if(vrt=="Transaction Successful"){ %>
+                <div class="submit"><%= vrt %></div>
+                <% }else{ %>
+      <div class="on">  <%= vrt %></div>
+      <% } %>
+        <% }else{ %>
+
+          <% } %>
+<!-------------------------------------------------------------->
+          <div class="data"><h>Push Bonus to Main Account</h>
+          <hr>
+          <center>
+            <div id="box1">
+          <form id="ty" action="/push" method="post">
+            <p>Amount</p>
+            <input type="number" name="push_Amount" placeholder="Enter Amount"
+            id="amount" class="tt" required="required">
+           <input type="submit"  class="submiit" value="Submit">
+          </form>
+        </div>
+        </center>
+            </div>
+<!-------------------------------------------------------------->
+      <div class="data">
+  <h>Withdraw/Transfer</h>
+  <hr>
+  <center>
+  <!--<button id="slidetog">Fund with Card</button>-->
+<br>
+<div id="box1"><form id="ty" action="/Withdraw" method="post">
+  <p id="p">Bank Name</p>
+  <select id="amount" name="account_bank"   required="required">
+    <option value="" selected="selected">Bank Name</option>
+<option value="044">ACCESS BANK</option>
+<option value="063">ACCESS BANK(DIAMOND)</option>
+<option value="050">ECOBANK</option>
+<option value="084">ENTERPRISE BANK</option>
+<option value="070">FIDELITY BANK</option>
+<option value="011">FIRST BANK</option>
+<option value="214">FIRST CITY BANK</option>
+<option value="058">GUARANTY TRUST BANK(GT)</option>
+<option value="030">HERITAGE BANK</option>
+<option value="301">JAIZ BANK</option>
+<option value="082">KEYSTONE BANK</option>
+<option value="014">MAINSTREET BANK</option>
+<option value="076">POLARIS BANK</option>
+<option value="039">STANBIC IBTC BANK</option>
+<option value="232">STERLING BANK</option>
+<option value="032">UNION BANK NIGERIA</option>
+<option value="033">UNITED BANK FOR AFRICA(UBA)</option>
+<option value="215">UNITY BANK</option>
+<option value="035">WEMA BANK</option>
+<option value="057">ZENITH BANK</option>
+</select>
+<!--<input type="number" name="account_bank" placeholder="Choose Bank"
+id="amount" required="required">-->
+<p>Account Number</p>
+<input type="number" name="account_number" placeholder="Enter Account Number"
+id="amount" required="required">
+<p>Amount</p>
+<input type="number" name="amount" placeholder="Amount to Withdraw"
+id="amount" required="required" class="yy" oninput="vat()">
+<p>Amount+Charges</p>
+<div id="amount" class="rr"></div>
+<input type="submit"  class="submit" value="Submit">
+</form></div>
+  <!--<img src="badge.png" alt="">-->
+</center>
+</div>
+<footer>
+  <p id="note501c3">(c)2020 by STEVCOM</p>
+    <p id="copyright">Contact us:+234 8103987495</p>
+    </footer>
+  </div>
+  <script>
+  let data=document.querySelector('.yy');
+  let tt=document.querySelector('.tt');
+  let databndle=document.querySelector('.rr');
+  let submit=document.querySelector('.submit');
+  $('.submit').click(function (e) {
+    var amount2 = Math.abs(data.value)*1;
+    var amount = amount2 + 30;
+   var yu=confirm("Confirm Amount. Click OK if N" + amount + " is the correct amount.")
+   if(yu){
+     this.form.submit();
+     this.disabled=true;
+     this.value='Processing...'
+   }else{
+     e.preventDefault()
+     //this.value='Me...'
+    //  window.history.back();
+   }
+
+  });
+  $('.submiit').click(function (e) {
+    var amount = Math.abs(tt.value)*1;
+   var yu=confirm("Confirm Amount.Pushing N"+ amount +" to Main Account")
+   if(yu){
+     this.form.submit();
+     this.disabled=true;
+     this.value='Processing...'
+   }else{
+     e.preventDefault()
+     //this.value='Me...'
+    //  window.history.back();
+   }
+
+  });
+
+  function vat() {
+    let data=document.querySelector('.yy');
+    let databndle=document.querySelector('.rr');
+  var charge=Math.abs(data.value)*1+30
+  databndle.innerText=charge
+  }
+  </script>
+  </body>
+</html>

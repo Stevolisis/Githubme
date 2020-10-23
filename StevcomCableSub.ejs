@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport"
+  content="width-device-width,initial-scale=1.0">
+<title>Sidebar Dashboard Template</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <script src="jquery-3.5.1.js"></script>
+  <link id="pagestyle" rel='stylesheet'
+  type='text/css'href='StevcomCableSub.css'>
+</head>
+<body>
+  <input type="checkbox" id="check">
+<header>
+  <label for="check">
+    <i class="fas fa-bars" id="Sidebar_btn"></i>
+  </label>
+<div class="left_area">
+  <h3><span>STEV</span>COM</h3>
+    </div>
+    <div class="right_area">
+      <a href="/logout"class="logout_btn">Logout</a>
+      </div>
+      </header>
+      <div class="Sidebar">
+        <center>
+          <div class="profile_image">
+            <i class="fas fa-user-circle fa-6x" class="profile_image1"></i>
+          </div>
+          <h4>Steven</h4><!--Stevolisis|| id:2345-->
+          </center>
+          <a href="/dashboard"><i class="fas fa-user-circle"></i><span>Dashboard</span></a>
+          <a href="/StevcomFundAccnt"><i class="fas fa-credit-card"></i><span>Fund account</span></a>
+          <a href="/StevcomDataOrder"><i class="fas fa-wifi"></i><span>Buy Data</span></a>
+          <a href="/StevcomAirtime"><i class="fas fa-phone-alt"></i><span>Buy Airtime</span></a>
+          <a href="/StevcomCableSub"><i class="fas fa-desktop"></i><span>Cable Subscription</span></a>
+          <a href="/transfer"><i class="fas fa-paper-plane"></i><span>Transfer to Others</span></a>
+          <a href="/withdraw"><i class="fas fa-money-bill-alt"></i><span>Withdraw/Transfer</span></a>
+          <a href="https://api.whatsapp.com/send?phone=23408103987495&text"><i class="fab fa-whatsapp fa-1x"></i><span>Customer Care</span></a>
+        </div>
+        <div class="hj">
+    <div class="ata"><br>
+      <img src="dstv.png" class="profile_image1" >
+      <img src="gotv.png" class="profile_image1">
+      <img src="Startimes.PNG" class="profile_image1" >
+    </div>
+    <div class="data">
+Cable Subscriptions<hr>
+ <form id="ty" action="/StevcomCableSub" method="POST">
+   <div>TV Platform</div>
+     <select id="form-control" name="Tv_Platform" required="required" >
+   <option value="" selected="selected">Select Platform</option>
+<option value="DSTV" onclick="populate('form-control','form-control2')">DSTV</option>
+<option value="GOTV" onclick="populate1('form-control','form-control2')">GOTV</option>
+<option value="STARTIMES" onclick="populate2('form-control','form-control2')" >STARTIMES</option>
+</select>
+
+ <div>Subscription Package</div>
+    <select id="form-control2" name="Subscription_Package" required="required">
+   <option value="">Select Tv Platform</option>
+ </select>
+<div>SmartCard/IUC Number</div>
+<input type="number" id="form-control3" name="IUC_Number"
+ placeholder="Smartcard/IUC Number"
+ class="form-control"  required="required">
+ <button type="submit"  class="submit">Submit</button>
+</form>
+<p>You get 1% discount on your DSTV and GOTV subsciption.</p>
+    </div>
+    <footer id="bn">
+      <p id="note501c3">(c)2020 by STEVCOM</p>
+        <p id="copyright">Contact us:+234 8103987495</p>
+        </footer>
+      </div>
+      <script>
+      $('.submit').click(function () {
+        this.form.submit();
+        this.disabled=true;
+        this.innerText='Processing...'
+      });
+      </script>
+        <script  src="StevcomCableSub.js"></script>
+  </body>
+  </html>

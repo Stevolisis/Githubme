@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport"
+  content="width-device-width,initial-scale=1.0">
+<title>Sidebar Dashboard Template</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+ <script src="jquery-3.5.1.js"></script>
+  <link id="pagestyle" rel='stylesheet' type='text/css'
+  href='Stevhistory.css'>
+</head>
+<body>
+  <input type="checkbox" id="check">
+<header>
+  <label for="check">
+    <i class="fas fa-bars" id="Sidebar_btn"></i>
+  </label>
+<div class="left_area">
+  <h3><span>STEV</span>COM</h3>
+    </div>
+    <div class="right_area">
+      <a href="/logout" class="logout_btn">Logout</a>
+    </div><br>
+    <button><a href="#a">One</a></button>
+    <button><a href="#b" class="about">Two</a></button><br>
+        <!--#sidehr-->
+    <button><a href="#c" id="Register">Three</a></button>
+    <button><a href="#d" id="Register">Four</a></button><br>
+    <button><a href="#e" class="contact" >Five</a></button>
+    <button><a href="#f" class="contact" >Five</a></button>
+      </header>
+      <div class="Sidebar">
+        <center>
+          <div class="profile_image">
+            <i class="fas fa-user-circle fa-6x" ></i>
+          </div>
+          <h4><%= vu.username %></h4><!--Stevolisis|| id:2345-->
+          </center>
+          <a href="/dashboard"><i class="fas fa-user-circle"></i><span>Dashboard</span></a>
+          <a href="/StevcomFundAccnt"><i class="fas fa-credit-card"></i><span>Fund account</span></a>
+          <a href="/StevcomDataOrder"><i class="fas fa-wifi"></i><span>Buy Data</span></a>
+          <a href="/StevcomAirtime"><i class="fas fa-phone-alt"></i><span>Buy Airtime</span></a>
+          <a href="/StevcomCableSub"><i class="fas fa-desktop"></i><span>Cable Subscription</span></a>
+          <a href="/transfer"><i class="fas fa-paper-plane"></i><span>Transfer to Others</span></a>
+          <a href="/withdraw"><i class="fas fa-money-bill-alt"></i><span>Withdraw/Transfer</span></a>
+          <a href="https://api.whatsapp.com/send?phone=23408103987495&text"><i class="fab fa-whatsapp fa-1x"></i><span>Customer Care</span></a>
+        </div>
+  <div class="hj">
+    <div class="ata" ><br>
+      <div >  <i class="fas fa-history fa-3x"></i></div>
+          <div ><i class="fas fa-history fa-3x"></i></div>
+    </div>
+    <div class="data9" id="a">
+      <h4 >Deposit History</h4>
+      <hr>
+    <div class="ff">
+      <table>
+        <tr>
+          <th>Reference</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <% if(vu.deposit==""){ %>
+          <tr>
+      <td>No Deposit history</td>
+      <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+        <% }else{ %>
+          <% for (let i=0; i< vu.deposit.length; i++){ %>
+            <tr>
+          <td> <%= vu.deposit[i].c %></td>
+          <td> N<%= vu.deposit[i].a %></td>
+          <td><%= vu.deposit[i].created_at %></td>
+          <td> <%= vu.deposit[i].d %></td>
+            </tr>
+           </tr>
+           <% } %>
+           <% } %>
+      </table>
+    </div>
+  </div>
+  <div class="data9" id="b">
+    <h4>Data Topup History</h4>
+    <hr>
+  <div class="ff">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Plan</th>
+        <th>Plan Amount</th>
+        <th>Number</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+      <% if(vu.dataorder==""){ %>
+        <tr>
+    <td>No dataorder history</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+   </tr>
+      <% }else{ %>
+        <% for (let i=0; i< vu.dataorder.length; i++){ %>
+          <tr>
+        <td> <%= vu.dataorder[i].f %></td>
+        <td> <%= vu.dataorder[i].e %></td>
+        <td> N<%= vu.dataorder[i].a %></td>
+        <td> <%= vu.dataorder[i].c %></td>
+        <td><%= vu.dataorder[i].created_at %></td>
+        <td> <%= vu.dataorder[i].j %></td>
+          </tr>
+         </tr>
+       </ol>
+         <% } %>
+         <% } %>
+    </table>
+  </div>
+</div>
+  <div class="data9" id="c">
+    <h4>Airtime Topup History</h4>
+    <hr>
+  <div class="ff">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Network</th>
+        <th>Amount</th>
+        <th>Number</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+      <% if(vu.airtimetopup==""){ %>
+        <tr>
+    <td>No airtimetopup history</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+   </tr>
+      <% }else{ %>
+        <% for (let i=0; i< vu.airtimetopup.length; i++){ %>
+          <tr>
+        <td> <%= vu.airtimetopup[i].f %></td>
+        <td> <%= vu.airtimetopup[i].b %></td>
+        <td> <%= vu.airtimetopup[i].c %></td>
+        <td> <%= vu.airtimetopup[i].d %></td>
+        <td><%= vu.airtimetopup[i].created_at %></td>
+        <td> <%= vu.airtimetopup[i].j %></td>
+          </tr>
+         </tr>
+       </ol>
+         <% } %>
+         <% } %>
+    </table>
+  </div>
+</div>
+<div class="data9" id="d">
+  <h4>Cable Subscription history</h4>
+  <hr>
+<div class="ff">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Cable Plan</th>
+      <th>Plan Amount</th>
+      <th>IUC</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+    <% if(vu.cablesub==""){ %>
+      <tr>
+  <td>No Cable Subscription history</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+    <% }else{ %>
+      <% for (let i=0; i< vu.cablesub.length; i++){ %>
+        <tr>
+      <td> <%= vu.cablesub[i].f %></td>
+      <td> N<%= vu.cablesub[i].e %></td>
+      <td> <%= vu.cablesub[i].a %></td>
+      <td> <%= vu.cablesub[i].c %></td>
+      <td><%= vu.cablesub[i].created_at %></td>
+      <td> <%= vu.cablesub[i].j %></td>
+        </tr>
+       </tr>
+     </ol>
+       <% } %>
+       <% } %>
+  </table>
+</div>
+</div>
+<div class="data9" id="e">
+  <h4>Transfer History</h4>
+  <hr>
+<div class="ff">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Transfer Amount</th>
+      <th>Reciever</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+    <% if(vu.transferhistory==""){ %>
+      <tr>
+  <td>No Transfer history</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+    <% }else{ %>
+      <% for (let i=0; i< vu.transferhistory.length; i++){ %>
+        <tr>
+      <td> <%= vu.transferhistory[i].a %></td>
+      <td> N<%= vu.transferhistory[i].b %></td>
+      <td><%= vu.transferhistory[i].c %></td>
+      <td><%= vu.transferhistory[i].tre %></td>
+      <td> <%= vu.transferhistory[i].j %></td>
+        </tr>
+       </tr>
+     </ol>
+       <% } %>
+       <% } %>
+  </table>
+</div>
+</div>
+<div class="data9" id="f">
+  <h4>Withdraw History</h4>
+  <hr>
+<div class="ff">
+  <table>
+    <tr>
+      <th>Reference</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+    <% if(vu.withdrawhistory==""){ %>
+      <tr>
+  <td>No Withdraw history</td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+    <% }else{ %>
+      <% for (let i=0; i< vu.withdrawhistory.length; i++){ %>
+        <tr>
+      <td> <%= vu.withdrawhistory[i].a %></td>
+      <td> N<%= vu.withdrawhistory[i].b %></td>
+      <td><%= vu.withdrawhistory[i].tre %></td>
+      <td> <%= vu.withdrawhistory[i].j %></td>
+        </tr>
+       </tr>
+       <% } %>
+       <% } %>
+  </table>
+</div>
+</div>
+
+</div>
+    <footer id="bn">
+      <p id="note501c3">(c)2020 by STEVCOM</p>
+        <p id="copyright">Contact us:+234 8103987495</p>
+        </footer>
+</div>
+<script>
+$('header a').on('click',function (e) {
+  if (this.hash !=='') {
+    e.preventDefault();
+    const hash=this.hash;
+    $('html,body').animate({
+      scrollTop:$(hash).offset().top
+    },900);
+  }
+});
+</script>
+        <script  src="StevcomDataOrder.js"></script>
+  </body>
+  </html>

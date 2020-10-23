@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link id="pagestyle" rel='stylesheet'
+    type='text/css'href='StevcomFundAccnt.css'>
+    <script src="jquery-3.5.1.js"></script>
+    <meta name="viewport"
+    content="width-device-width,initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+  <header>
+    <label for="check">
+      <i class="fas fa-bars" id="Sidebar_btn"></i>
+    </label>
+  <div class="left_area">
+    <h3><span>STEV</span>COM</h3>
+      </div>
+      <div class="right_area">
+        <a href="/logout" class="logout_btn">Logout</a>
+        </div>
+        </header>
+        <div class="Sidebar">
+          <center>
+            <div class="profile_image">
+              <i class="fas fa-user-circle fa-6x" class="profile_image1"></i>
+            </div>
+            <h4>Steven</h4><!--Stevolisis|| id:2345-->
+            </center>
+            <a href="/dashboard"><i class="fas fa-user-circle"></i><span>Dashboard</span></a>
+            <a href="/StevcomFundAccnt"><i class="fas fa-credit-card"></i><span>Fund account</span></a>
+            <a href="/StevcomDataOrder"><i class="fas fa-wifi"></i><span>Buy Data</span></a>
+            <a href="/StevcomAirtime"><i class="fas fa-phone-alt"></i><span>Buy Airtime</span></a>
+            <a href="/StevcomCableSub"><i class="fas fa-desktop"></i><span>Cable Subscription</span></a>
+            <a href="/transfer"><i class="fas fa-paper-plane"></i><span>Transfer to Others</span></a>
+            <a href="/withdraw"><i class="fas fa-money-bill-alt"></i><span>Withdraw/Transfer</span></a>
+            <a href="https://api.whatsapp.com/send?phone=23408103987495&text"><i class="fab fa-whatsapp fa-1x"></i><span>Customer Care</span></a>
+          </div>
+    <div class="hj">
+      <div class="ata"><br>
+<img src="download-2h.png" id="img">
+      </div>
+      <% if(vrt){ %>
+        <% if(vrt=="Transaction Successful"){ %>
+              <div class="submit"><%= vrt %></div>
+              <% }else{ %>
+    <div class="on">  <%= vrt %></div>
+    <% } %>
+      <% }else{ %>
+
+        <% } %>
+        <div class="submit"><Span>NOTE:</span>You will be charged 1.5% During Funding</div>
+      <div class="data">
+  <h>Fund your Account</h>
+  <hr>
+  <center>
+  <button id="slidetog">Fund with Card</button>
+<br>
+<div id="box1"><form id="ty" action="/StevcomFundAccnt" method="post">
+<input type="number" name="amount" placeholder="Amount to deposit"
+id="amount" required="required">
+<button type="submit"  class="submit">Continue to funding</button>
+</form></div>
+  <img src="badge.png" alt="">
+</center>
+</div>
+<footer>
+  <p id="note501c3">(c)2020 by STEVCOM</p>
+    <p id="copyright">Contact us:+234 8103987495</p>
+    </footer>
+  </div>
+  <script  src="StevcomFundAccnt.js"></script>
+
+  </body>
+</html>

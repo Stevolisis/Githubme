@@ -264,7 +264,7 @@ font-family: BarlowCondensed-Regular;
   border: 1px solid black;
   margin: 0;
   margin-left: 6px;
-padding:10px;
+padding:13px;
 margin-top: 0;
 padding-top: 20px;
 border-radius: 20px;
@@ -415,7 +415,6 @@ margin-right: 6.4vw ;
 
 }
 body{
-  background: url("dasu.jpg");
   background-repeat: no-repeat;
 background-size: cover;
   background-attachment: fixed;

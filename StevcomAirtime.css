@@ -73,11 +73,10 @@ src: url("ProcessingSansPro-Regular.ttf");
 .Sidebar{
   z-index: 1;
   background: #2F323A;
-
   position: fixed;
   overflow-y: auto;
   left: 0px;
-  width: 250px;
+  width: 244px;
   height: 100%;
   transition: 0.5s;
   transition-property: width;
@@ -335,7 +334,7 @@ transition-property: left;
 }
 #check:checked~ .Sidebar{
   padding-top: 10px;
-  width: 250px;
+  width: 244px;
   font-size: 16px;
   left: 0px ;
 

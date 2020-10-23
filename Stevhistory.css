@@ -71,10 +71,11 @@ header{
 .left_area h3{
   font-family: plaster;
   color: #fff;
-  margin: 0;
+  margin-top: -3px;
   text-transform: uppercase;;
   font-size: 30px;
     font-weight: 900;
+    margin-left: -6px;
 }
 @font-face {
 font-family: plaster;
@@ -94,7 +95,7 @@ src: url("ProcessingSansPro-Regular.ttf");
   background:#2F323A;
   text-decoration: none;
   float: right;
-  margin-top: -35px;
+  margin-top: -68px;
   margin-right: 25px;
   border-radius: 2px;
   font-size: 15px;
@@ -102,7 +103,6 @@ src: url("ProcessingSansPro-Regular.ttf");
   color: #fff;
     transition: 0.5s;
   transition-property:  background;
-
 }
 .logout_btn:hover{
   background: #E87E95;

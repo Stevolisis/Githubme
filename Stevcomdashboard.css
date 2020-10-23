@@ -42,10 +42,11 @@ header{
 .left_area h3{
   font-family: plaster;
   color: #fff;
-  margin: 0;
+  margin-top: -3px;
   text-transform: uppercase;;
   font-size: 30px;
     font-weight: 900;
+    margin-left: -6px;
 }
 @font-face {
 font-family: plaster;
@@ -65,7 +66,7 @@ src: url("ProcessingSansPro-Regular.ttf");
   background:#2F323A;
   text-decoration: none;
   float: right;
-  margin-top: -35px;
+  margin-top: -68px;
   margin-right: 25px;
   border-radius: 2px;
   font-size: 15px;
@@ -178,15 +179,16 @@ label #Sidebar_btn{
   margin: 5vw;
 padding:10px;
 margin-top: 0;
-padding-top: 80px;
+padding-top: 73px;
 border-radius: 20px;
 background: #E87E95;
   box-shadow: 0 0 25px
   rgba(0, 0, 0, 0.7),
   inset 0 0 10px
   rgba(255, 255, 255, 0.6);
-font-size: 18px;
+font-size: 17px;
 word-wrap: break-word;
+font-family: BarlowCondensed-Regular;
 }
 .dw span{
   color: red;
@@ -218,7 +220,7 @@ background: #E87E95;
   rgba(0, 0, 0, 0.7),
   inset 0 0 10px
   rgba(255, 255, 255, 0.6);
-font-size: 27px;
+font-size: 25px;
 word-spacing: 8px;
 padding-top: 15px;
 z-index: 4;
@@ -245,7 +247,7 @@ background: #E87E95;
   rgba(0, 0, 0, 0.7),
   inset 0 0 10px
   rgba(255, 255, 255, 0.6);
-font-size: 20px;
+font-size: 18px;
 word-spacing: 8px;
 text-align: center;
 font-family: BarlowCondensed-Regular;
@@ -260,11 +262,10 @@ font-family: BarlowCondensed-Regular;
 
 .userH{
   font-family: BarlowCondensed-Regular;
-
   border: 1px solid black;
   margin: 0;
   margin-left: 6px;
-padding:8px;
+padding:10px;
 margin-top: 0;
 padding-top: 20px;
 border-radius: 20px;
@@ -273,7 +274,7 @@ background: orange;
   rgba(0, 0, 0, 0.7),
   inset 0 0 10px
   rgba(255, 255, 255, 0.6);
-font-size: 18px;
+font-size: 16px;
 word-spacing: 8px;
 display: block;
 
@@ -350,7 +351,7 @@ footer{
 }
 footer p{
   margin: 2em; font-size: 85%;
-  font-size: 15px;
+  font-size: 14px;
 }
 footer p a:link,footer p a:visited{
   color: #DDDD00;

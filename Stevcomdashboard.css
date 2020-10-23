@@ -82,11 +82,10 @@ src: url("ProcessingSansPro-Regular.ttf");
 .Sidebar{
   z-index: 1;
   background: #2F323A;
-
   position: fixed;
   overflow-y: auto;
   left: 0px;
-  width: 250px;
+  width: 247px;
   height: 100%;
   transition: 0.5s;
   transition-property: width;
@@ -186,7 +185,7 @@ background: #E87E95;
   rgba(0, 0, 0, 0.7),
   inset 0 0 10px
   rgba(255, 255, 255, 0.6);
-font-size: 17px;
+font-size: 17.4px;
 word-wrap: break-word;
 font-family: BarlowCondensed-Regular;
 }
@@ -364,7 +363,7 @@ footer p a:link,footer p a:visited{
   }
   #check:checked~ .Sidebar{
     padding-top: 10px;
-    width: 250px;
+    width: 244px;
     font-size: 16px;
     left: 0px ;
 
@@ -416,6 +415,7 @@ margin-right: 6.4vw ;
 
 }
 body{
+  background: url("dasu.jpg");
   background-repeat: no-repeat;
 background-size: cover;
   background-attachment: fixed;

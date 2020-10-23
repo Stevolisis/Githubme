@@ -61,24 +61,12 @@
           <th>Date</th>
           <th>Status</th>
         </tr>
-        <% if(vu.deposit==""){ %>
           <tr>
       <td>No Deposit history</td>
       <td></td>
       <td></td>
       <td></td>
      </tr>
-        <% }else{ %>
-          <% for (let i=0; i< vu.deposit.length; i++){ %>
-            <tr>
-          <td> <%= vu.deposit[i].c %></td>
-          <td> N<%= vu.deposit[i].a %></td>
-          <td><%= vu.deposit[i].created_at %></td>
-          <td> <%= vu.deposit[i].d %></td>
-            </tr>
-           </tr>
-           <% } %>
-           <% } %>
       </table>
     </div>
   </div>
@@ -95,7 +83,6 @@
         <th>Date</th>
         <th>Status</th>
       </tr>
-      <% if(vu.dataorder==""){ %>
         <tr>
     <td>No dataorder history</td>
     <td></td>
@@ -104,20 +91,6 @@
     <td></td>
     <td></td>
    </tr>
-      <% }else{ %>
-        <% for (let i=0; i< vu.dataorder.length; i++){ %>
-          <tr>
-        <td> <%= vu.dataorder[i].f %></td>
-        <td> <%= vu.dataorder[i].e %></td>
-        <td> N<%= vu.dataorder[i].a %></td>
-        <td> <%= vu.dataorder[i].c %></td>
-        <td><%= vu.dataorder[i].created_at %></td>
-        <td> <%= vu.dataorder[i].j %></td>
-          </tr>
-         </tr>
-       </ol>
-         <% } %>
-         <% } %>
     </table>
   </div>
 </div>
@@ -134,7 +107,6 @@
         <th>Date</th>
         <th>Status</th>
       </tr>
-      <% if(vu.airtimetopup==""){ %>
         <tr>
     <td>No airtimetopup history</td>
     <td></td>
@@ -143,20 +115,6 @@
     <td></td>
     <td></td>
    </tr>
-      <% }else{ %>
-        <% for (let i=0; i< vu.airtimetopup.length; i++){ %>
-          <tr>
-        <td> <%= vu.airtimetopup[i].f %></td>
-        <td> <%= vu.airtimetopup[i].b %></td>
-        <td> <%= vu.airtimetopup[i].c %></td>
-        <td> <%= vu.airtimetopup[i].d %></td>
-        <td><%= vu.airtimetopup[i].created_at %></td>
-        <td> <%= vu.airtimetopup[i].j %></td>
-          </tr>
-         </tr>
-       </ol>
-         <% } %>
-         <% } %>
     </table>
   </div>
 </div>
@@ -173,7 +131,6 @@
       <th>Date</th>
       <th>Status</th>
     </tr>
-    <% if(vu.cablesub==""){ %>
       <tr>
   <td>No Cable Subscription history</td>
   <td></td>
@@ -182,20 +139,6 @@
   <td></td>
   <td></td>
  </tr>
-    <% }else{ %>
-      <% for (let i=0; i< vu.cablesub.length; i++){ %>
-        <tr>
-      <td> <%= vu.cablesub[i].f %></td>
-      <td> N<%= vu.cablesub[i].e %></td>
-      <td> <%= vu.cablesub[i].a %></td>
-      <td> <%= vu.cablesub[i].c %></td>
-      <td><%= vu.cablesub[i].created_at %></td>
-      <td> <%= vu.cablesub[i].j %></td>
-        </tr>
-       </tr>
-     </ol>
-       <% } %>
-       <% } %>
   </table>
 </div>
 </div>
@@ -211,7 +154,6 @@
       <th>Date</th>
       <th>Status</th>
     </tr>
-    <% if(vu.transferhistory==""){ %>
       <tr>
   <td>No Transfer history</td>
   <td></td>
@@ -219,20 +161,6 @@
   <td></td>
   <td></td>
  </tr>
-    <% }else{ %>
-      <% for (let i=0; i< vu.transferhistory.length; i++){ %>
-        <tr>
-      <td> <%= vu.transferhistory[i].a %></td>
-      <td> N<%= vu.transferhistory[i].b %></td>
-      <td><%= vu.transferhistory[i].c %></td>
-      <td><%= vu.transferhistory[i].tre %></td>
-      <td> <%= vu.transferhistory[i].j %></td>
-        </tr>
-       </tr>
-     </ol>
-       <% } %>
-       <% } %>
-  </table>
 </div>
 </div>
 <div class="data9" id="f">
@@ -246,28 +174,15 @@
       <th>Date</th>
       <th>Status</th>
     </tr>
-    <% if(vu.withdrawhistory==""){ %>
       <tr>
   <td>No Withdraw history</td>
   <td></td>
   <td></td>
   <td></td>
  </tr>
-    <% }else{ %>
-      <% for (let i=0; i< vu.withdrawhistory.length; i++){ %>
-        <tr>
-      <td> <%= vu.withdrawhistory[i].a %></td>
-      <td> N<%= vu.withdrawhistory[i].b %></td>
-      <td><%= vu.withdrawhistory[i].tre %></td>
-      <td> <%= vu.withdrawhistory[i].j %></td>
-        </tr>
-       </tr>
-       <% } %>
-       <% } %>
   </table>
 </div>
 </div>
-
 </div>
     <footer id="bn">
       <p id="note501c3">(c)2020 by STEVCOM</p>

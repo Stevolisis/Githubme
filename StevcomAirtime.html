@@ -54,16 +54,16 @@ AIRTIME TOPUP<hr>
  <div>Network</div>
  <select class="form-control2" name="network" required="required">
    <option value="" selected="selected">select network</option>
-   <option value="MTN|1|0.02" onclick="populate('MTN')">MTN</option>
-   <option value="AIRTEL|4|0.02" onclick="populate('AIRTEL')">AIRTEL</option>
-   <option value="GLO|2|0.05" onclick="populate('GLO')">GLO</option>
-   <option value="9MOBILE|3|0.02" onclick="populate('9MOBILE')">9MOBILE</option>
+   <option value="MTN|1|0.98">MTN</option>
+   <option value="AIRTEL|4|0.98">AIRTEL</option>
+   <option value="GLO|2|0.95">GLO</option>
+   <option value="9MOBILE|3|0.98">9MOBILE</option>
  </select>
  <div>Amount</div>
- <input type="number" id="yy" oninput="vat()" name="amount" placeholder="Amount"
+ <input type="number" id="yy" name="amount" placeholder="Amount"
   class="form-control3" required="required">
   <div>Amount You Pay</div>
-  <div id="rr" class="form-control3" ></div>
+  <P id="rr" class="form-control3" ></P>
   <input type="submit"  class="submit" value="Submit">
 </form>
 <h6>If not credited after 40min Contact our Customer Care</h6>
@@ -73,6 +73,43 @@ AIRTIME TOPUP<hr>
 <p>To check balance in GLO dial *124#</p>
 <p>To check balance in 9MOBILE dial *232#</p>
     </div>
+    <script type="text/javascript">
+    $('.form-control2').change(function () {
+  var selectednetwork = $(this).val();
+   if (selectednetwork == "MTN|1|0.98") {
+     $("#yy").keyup(function() {
+       $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+       // $("#discount").text('   (2% Discount)');
+     });
+
+   }else if (selectednetwork == "AIRTEL|4|0.98") {
+$('form button[type="submit"]').prop("disabled", false);
+$("#yy").keyup(function() {
+  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+  //$("#discount").text('   (2% Discount)');
+
+
+});
+
+} else if (selectednetwork == "GLO|2|0.95") {
+$("#yy").keyup(function() {
+  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.95));
+  // $("#discount").text('   (2% Discount)');
+
+
+});
+
+} else if (selectednetwork == "9MOBILE|3|0.98") {
+$("#yy").keyup(function() {
+  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+  // $("#discount").text('   (2% Discount)');
+
+
+});
+
+}
+});
+    </script>
     <script>
     let phonez=document.querySelector('#uop');
     let databundl=document.querySelector('#yy');
@@ -80,7 +117,7 @@ AIRTIME TOPUP<hr>
     let network=document.querySelector('.form-control2');
     $('.submit').click(function (e) {
       var amount = Math.abs(databundl.value);
-     var yu=confirm("Are you sure you want to buy " +'N'+ amount + " airtime to "+phonez.value);
+     var yu=confirm("Confirm.Purchase of " +'N'+ amount + " airtime to "+phonez.value);
      if(yu){
        this.form.submit();
        this.disabled=true;
@@ -91,43 +128,6 @@ AIRTIME TOPUP<hr>
       //  window.history.back();
      }
     });
-    function populate(ui) {
-      if (ui=='MTN') {
-        databundl.placeholder='Amount1'
-      }else if (ui=='AIRTEL') {
-        databundl.placeholder='Amount2'
-      }else if (ui=='GLO') {
-        databundl.placeholder='Amount3'
-      }else if (ui=='9MOBILE') {
-        databundl.placeholder='Amount4'
-      }
-    }
-      function vat(){
-        let ui=0.2;
-        let mm=databundl.value;
-        let m=databundl.placeholder
-        if (m=='Amount1') {
-          let me=0.02*databundl.value;
-          let me2=me
-          let me3=mm-me2
-        databndle.innerText=me3
-      }else if (m=='Amount2') {
-        let me=0.02*databundl.value;
-        let me2=me
-        let me3=mm-me2
-        databndle.innerText=me3
-    }else if (m=='Amount3') {
-      let me=0.05*databundl.value;
-      let me2=me
-      let me3=mm-me2
-      databndle.innerText=me3
-  }else if (m=='Amount4') {
-    let me=0.02*databundl.value;
-    let me2=me
-    let me3=mm-me2
-    databndle.innerText=me3
-  }
-    }
     </script>
     <footer id="bn">
       <p id="note501c3">(c)2020 by STEVCOM</p>

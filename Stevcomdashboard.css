@@ -74,7 +74,6 @@ src: url("ProcessingSansPro-Regular.ttf");
   color: #fff;
     transition: 0.5s;
   transition-property:  background;
-
 }
 .logout_btn:hover{
   background: #E87E95;

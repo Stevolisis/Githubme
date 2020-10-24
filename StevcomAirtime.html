@@ -73,24 +73,7 @@ AIRTIME TOPUP<hr>
 <p>To check balance in GLO dial *124#</p>
 <p>To check balance in 9MOBILE dial *232#</p>
     </div>
-    <script>
-    let phonez=document.querySelector('#uop');
-    let databundl=document.querySelector('#yy');
-    let databndle=document.querySelector('#rr');
-    let network=document.querySelector('.form-control2');
-    $('.submit').click(function (e) {
-      var amount = Math.abs(databundl.value);
-     var yu=confirm("Confirm.Purchase of " +'N'+ amount + " airtime to "+phonez.value);
-     if(yu){
-       this.form.submit();
-       this.disabled=true;
-       this.value='Processing...'
-     }else{
-       e.preventDefault()
-       //this.value='Me...'
-      //  window.history.back();
-     }
-    });
+    <script type="text/javascript">
     $('.form-control2').change(function () {
   var selectednetwork = $(this).val();
    if (selectednetwork == "MTN|1|0.98") {
@@ -126,6 +109,25 @@ $("#yy").keyup(function() {
 
 }
 });
+    </script>
+    <script>
+    let phonez=document.querySelector('#uop');
+    let databundl=document.querySelector('#yy');
+    let databndle=document.querySelector('#rr');
+    let network=document.querySelector('.form-control2');
+    $('.submit').click(function (e) {
+      var amount = Math.abs(databundl.value);
+     var yu=confirm("Confirm.Purchase of " +'N'+ amount + " airtime to "+phonez.value);
+     if(yu){
+       this.form.submit();
+       this.disabled=true;
+       this.value='Processing...'
+     }else{
+       e.preventDefault()
+       //this.value='Me...'
+      //  window.history.back();
+     }
+    });
     </script>
     <footer id="bn">
       <p id="note501c3">(c)2020 by STEVCOM</p>

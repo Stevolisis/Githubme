@@ -148,12 +148,12 @@ id="amount" required="required" class="yy" oninput="vat()">
 
   });
 
-  function vat() {
-    let data=document.querySelector('.yy');
-    let databndle=document.querySelector('.rr');
-  var charge=Math.abs(data.value)*1+30
-  databndle.innerText=charge
-  }
+  </script>
+  <script type="text/javascript">
+  $(".yy").keyup(function() {
+        $(".rr").text('#' + (Number($(".yy").val()) +30));
+        // $("#discount").text('   (2% Discount)');
+      });
   </script>
   </body>
 </html>

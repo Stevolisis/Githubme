@@ -50,9 +50,9 @@ Cable Subscriptions<hr>
    <div>TV Platform</div>
      <select id="form-control" name="Tv_Platform" required="required" >
    <option value="" selected="selected">Select Platform</option>
-<option value="DSTV" onclick="populate('form-control','form-control2')">DSTV</option>
-<option value="GOTV" onclick="populate1('form-control','form-control2')">GOTV</option>
-<option value="STARTIMES" onclick="populate2('form-control','form-control2')" >STARTIMES</option>
+<option value="DSTV">DSTV</option>
+<option value="GOTV">GOTV</option>
+<option value="STARTIMES">STARTIMES</option>
 </select>
 
  <div>Subscription Package</div>
@@ -73,10 +73,9 @@ Cable Subscriptions<hr>
         </footer>
       </div>
       <script>
-      $('.submit').click(function () {
-        this.form.submit();
-        this.disabled=true;
-        this.innerText='Processing...'
+      $('.submit').click(function (e) {
+      alert('Cable Subscription Currently Unavailable')
+      e.preventDefault();
       });
       </script>
         <script  src="StevcomCableSub.js"></script>

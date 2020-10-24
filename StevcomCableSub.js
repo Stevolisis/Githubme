@@ -1,91 +1,48 @@
-const myform2=document.querySelector('#ty');
-let tvplatform=document.querySelector('#form-control');
-let subscriptionpackage=document.querySelector('#form-control2');
-let iucnumber=document.querySelector('#form-control3');
+var dataRates = {"DSTV":[
+{"id":"0.179.0.200/500MB-N200","network":"DSTV","amount":"6975.00","data_size":"Dstv Compact","duration":"1month"},
+{"id":"0.166.0.340/1GB-N340","network":"DSTV","amount":"10925.00","data_size":"Dstv Compact Plus","duration":"1month"},
+{"id":"0.167.0.650/2GB-N650","network":"DSTV","amount":"16200.00","data_size":"Dstv Premium","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"18150.00","data_size":"Dstv Premium Asia","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"5540.00","data_size":"Asia Bouquet","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"2565.00","data_size":"Dstv Yanga Bouquet E36","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"4615.00","data_size":"Dstv Confam Bouquet","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"1850.00","data_size":"Padi","duration":"1month"},
+{"id":"0.168.0.950/3GB-N950","network":"DSTV","amount":"1285.00","data_size":"DStv Great Wall Standalone Bouquet","duration":"1month"}],
 
-//--------------------------------------------------------------------
-var e=document.querySelector('.Sidebar h4 span');
-console.log(e.innerText);
-//---------------------------------------------------------------------
-function populate(s1,s2) {
-  var s1=document.getElementById(s1);
-  var s2=document.getElementById(s2);
-s2.innerHTML="";
-if (s1.value=='DSTV') {
-  var optionArray=["CompactN6975|Dstv Compact-N6,975",
-  "Compact_PlusN10925|Dstv Compact Plus-N10,925","PremiumN16200|Dstv Premium-N16,200",
-"Premium_AsiaN18150|Dstv Premium Asia-N18,150","Asia_BouquetN5540|Asia Bouquet-N5,540",
-"Yanga_Bouquet_E36N2565|Dstv Yanga Bouquet E36-N2,565","Confam_BouquetN4615|Dstv Confam Bouquet-N4,615",
-  "PadiN1850|Padi-N1,850","Great_Wall_Standalone_BouquetN1285|DStv Great Wall Standalone Bouquet-N1,285",];}
-  for (var option in optionArray) {
-    var pair=optionArray[option].split("|");
-    var newOption=document.createElement("option");
-    newOption.value=pair[0];
-    newOption.innerHTML=pair[1];
-    s2.options.add(newOption);
+"GOTV":[
+  {"id":"0.146.0.1300/2GB-N1,300","network":"GOTV","amount":"3280.00","data_size":"GOtv Max","duration":"1month"},
+{"id":"0.144.0.470/750MB-N470","network":"GOTV","amount":"1640.00","data_size":"GOtv Jinja Bouquet","duration":"1month"},
+{"id":"0.145.0.980/1.5GB-N980","network":"GOTV","amount":"2460.00","data_size":"GOtv Jolli Bouquet","duration":"1month"},
+{"id":"0.146.0.1300/2GB-N1,300","network":"GOTV","amount":"410.00","data_size":"GOtv Lite","duration":"1month"}],
 
-  }
+"STARTIMES":[
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"900.00","data_size":"Nova","duration":"1month"},
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"1700.00","data_size":"Basic","duration":"1month"},
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"2200.00","data_size":"Smart","duration":"1month"},
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"2500.00","data_size":"Classic","duration":"1month"},
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"4200.00","data_size":"Super","duration":"1month"},
+{"id":"0.154.0.380/500MB-N380","network":"STARTIMES","amount":"300.00","data_size":"Nova-Weekly","duration":"1month"},
+{"id":"0.170.0.1500/1GB-N500","network":"STARTIMES","amount":"600.00","data_size":"Basic-Weekly","duration":"1month"},
+{"id":"0.155.0.760/1.5GB-N760","network":"STARTIMES","amount":"800.00","data_size":"Smart-Weekly","duration":"1month"},
+{"id":"0.156.0.900/2GB-N900","network":"STARTIMES","amount":"1200.00","data_size":"Classic-Weekly","duration":"1month"},
+{"id":"0.157.0.1100/3GB-N1,100","network":"STARTIMES","amount":"1500.00","data_size":"Super-Weekly","duration":"1month"},
+{"id":"0.158.0.1500/4.5GB-N1,500","network":"STARTIMES","amount":"90.00","data_size":"Nova-Daily","duration":"1month"}
+]};
 
-  };
-  //--------------------------------------------------------------------
-  function populate1(s1,s2) {
-    var s1=document.getElementById(s1);
-    var s2=document.getElementById(s2);
-  s2.innerHTML="";
-  if (s1.value=='GOTV') {
-   var optionArray=["MaxN3280|GOtv Max-N3,280",
-   "Jinja_BouquetN1640|GOtv Jinja Bouquet-N1,640","Jolli_BouquetN2460|GOtv Jolli Bouquet-N2,460",
-   "LiteN410|GOtv Lite-N410"];
- }
-    for (var option in optionArray) {
-      var pair=optionArray[option].split("|");
-      var newOption=document.createElement("option");
-      newOption.value=pair[0];
-      newOption.innerHTML=pair[1];
-      s2.options.add(newOption);
+$('#form-control').change(function () {
+  var network = $(this).val();
+var rateArr = dataRates[network];
+var options='';
+for (var i = 0; i < rateArr.length; i++){
+var rate = rateArr[i];
 
-    }
+options += '<option value="'+rate['id']+'">'
+  + rate['data_size']
+  + ' - ' + '₦' + rate['amount'];
+// 			+ ' - ' + rate['duration'] + '</option>';
 
-    };
-    //--------------------------------------------------------------------
-    function populate2(s1,s2) {
-      var s1=document.getElementById(s1);
-      var s2=document.getElementById(s2);
-    s2.innerHTML="";
-    if (s1.value=='STARTIMES') {
-      var optionArray=["NovaN900|Nova-N900",
-      "BasicN1300|Basic-N1300","SmartN1900|Smart-N1,900"
-      ,"ClassicN1900|Classic-N1,900","SuperN3800|Super-N3,800","Nova_WeeklyN300|Nova-Weekly-N300"
-    ,"Basic-WeeklyN450|Basic-Weekly-N450","smart_WeeklyN600|smart-Weekly-N600",
-    "Classic_WeeklyN900|Classic-Weekly-N900","Super-WeeklyN1300|Super-Weekly-N1,300",
-    "Nova_DailyN90|Nova-Daily-N90"];
-    }
-      for (var option in optionArray) {
-        var pair=optionArray[option].split("|");
-        var newOption=document.createElement("option");
-        newOption.value=pair[0];
-        newOption.innerHTML=pair[1];
-        s2.options.add(newOption);
+}
 
-      }
+$('#form-control2').html(options);
 
-      };
-      //--------------------------------------------------------------------
-      myform2.addEventListener('submit',onSubmit);
-      function onSubmit(e) {
-        e.preventDefault();
-        var aarray=[tvplatform.value,subscriptionpackage.value,iucnumber.value]
-
-      const li2=
-        {
-          Tvplatform:aarray[0],
-          SubscriptionPackage:aarray[1],
-          IUCNumber:aarray[2]
-
-        };
-      const todojson2=JSON.stringify(li2);
-      console.log(todojson2);
-      tvplatform.value='';
-      subscriptionpackage.value='';
-      iucnumber.value='';
-      };
+});

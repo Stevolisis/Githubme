@@ -59,7 +59,7 @@ src: url("ProcessingSansPro-Regular.ttf");
   background:#2F323A;
   text-decoration: none;
   float: right;
-  margin-top: -35px;
+  margin-top: -68px;
   margin-right: 25px;
   border-radius: 2px;
   font-size: 15px;
@@ -67,7 +67,6 @@ src: url("ProcessingSansPro-Regular.ttf");
   color: #fff;
     transition: 0.5s;
   transition-property:  background;
-
 }
 .logout_btn:hover{
   background: #E87E95;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <meta name="viewport"
   content="width-device-width,initial-scale=1.0">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -68,8 +69,8 @@ PLACE ORDERS<hr>
 <!-------------------------------------------------------->
    <input type="submit"  class="submit" value="Submit">
 </form>
-<form id="ty" action="/Stevcom" method="post">
-  <button type="submit"  class="submit">Submit</button>
+<form id="ty" action="" method="post">
+  <input type="submit"  class="submit" value="Submit">
 </form>
 <h6>If not credited after 40min Contact our Customer Care.</h6>
 <p>To check balance in MTN dial *461*4#</p>
@@ -83,23 +84,22 @@ PLACE ORDERS<hr>
         </footer>
       </div>
 <script>
-let phonez=document.querySelector('#uop');
-let networkz=document.querySelector('#slct1');
-let bundlez=document.querySelector('#slct2');
-let submitz=document.querySelector('.submit');
-$('.submit').click(function (e) {
-  var amount = bundlez.value.split('/')[1];
- var yu=confirm("Confirm.Purchase of " + amount + " to "+phonez.value)
- if(yu){
-   this.form.submit();
-   this.disabled=true;
-   this.value='Processing...'
- }else{
-   e.preventDefault()
-   //this.value='Me...'
-  //  window.history.back();
- }
+$('#ty').submit(function (e) {
 
+    var network = $('#slct1').val();
+    var phone = $('#uop').val();
+    var Bundle = $('#slct2').val();
+    var Data_Bundle=Bundle.split('/')[1]
+      msg = "Confirm Purchase of "+Data_Bundle+' to '+phone;
+
+
+    if (msg != null) {
+      msg = msg + "\n\nDo you want to continue?";
+      if (confirm(msg)) return true;
+      else return false;
+    }
+
+    return true;
 });
 </script>
         <script  src="StevcomDataOrder.js"></script>

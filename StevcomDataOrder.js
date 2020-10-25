@@ -11,9 +11,9 @@ var dataRates = {"MTN|1":[
 {"id":"0.147.0.1440/3GB-N1,440","network":"AIRTEL","amount":"1440.00","data_size":"3GB","duration":"1month"},
 {"id":"0.148.0.1890/4.5GB-N1,890","network":"AIRTEL","amount":"1890.00","data_size":"4.5GB","duration":"1month"}],
 "GLO|2":[
-{"id":"17","network":"GLO","amount":"455.00","data_size":"1GB","duration":"14days"},
-{"id":"17","network":"GLO","amount":"880.00","data_size":"2.3GB","duration":"1month"},
-{"id":"17","network":"GLO","amount":"1295.00","data_size":"3.7GB","duration":"1month"}],
+{"id":"82.0.0.455/1GB-N455","network":"GLO","amount":"455.00","data_size":"1GB","duration":"14days"},
+{"id":"13.0.0.880/2.3GB-N880","network":"GLO","amount":"880.00","data_size":"2.3GB","duration":"1month"},
+{"id":"84.0.0.1295/3.7GB-N1,295","network":"GLO","amount":"1295.00","data_size":"3.7GB","duration":"1month"}],
 
 "9MOBILE|7":[
 {"id":"0.154.0.380/500MB-N380","network":"9MOBILE","amount":"380.00","data_size":"500MB","duration":"1month"},

@@ -2,12 +2,6 @@
   height: 60px;
   width: 60px;
 }
-body{
-  background: url("das.jpg");
-  background-size:cover;
-background-attachment: fixed;
-margin: 0;
-}
 header{
   position: fixed;
   background: #22242A;
@@ -15,6 +9,15 @@ header{
   width: 100%;
   height: 30px;
   z-index: 2;
+}
+body{
+  background: url("das.jpg");
+  background-size:cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+height: 100%;
 }
 .left_area h3{
   font-family: plaster;

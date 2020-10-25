@@ -473,4 +473,10 @@ padding-left: 10vw !important;
     margin-left: 0px;
 
   }
+  body{
+    background-repeat: no-repeat;
+  background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+  }
 }

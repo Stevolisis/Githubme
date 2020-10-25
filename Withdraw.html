@@ -52,10 +52,10 @@
           <hr>
           <center>
             <div id="box1">
-          <form id="ty" action="/push" method="post">
+          <form id="tyo" action="/push" method="post">
             <p>Amount</p>
             <input type="number" name="push_Amount" placeholder="Enter Amount"
-            id="amount" class="tt" required="required">
+            id="amount4" class="tt" required="required">
            <input type="submit"  class="submiit" value="Submit">
           </form>
         </div>
@@ -97,10 +97,10 @@
 id="amount" required="required">-->
 <p>Account Number</p>
 <input type="number" name="account_number" placeholder="Enter Account Number"
-id="amount" required="required">
+id="amount2" required="required">
 <p>Amount</p>
 <input type="number" name="amount" placeholder="Amount to Withdraw"
-id="amount" required="required" class="yy" oninput="vat()">
+id="amount3" required="required" class="yy">
 <p>Amount+Charges</p>
 <div id="amount" class="rr"></div>
 <input type="submit"  class="submit" value="Submit">
@@ -114,40 +114,31 @@ id="amount" required="required" class="yy" oninput="vat()">
     </footer>
   </div>
   <script>
-  let data=document.querySelector('.yy');
-  let tt=document.querySelector('.tt');
-  let databndle=document.querySelector('.rr');
-  let submit=document.querySelector('.submit');
-  $('.submit').click(function (e) {
-    var amount2 = Math.abs(data.value)*1;
-    var amount = amount2 + 30;
-   var yu=confirm("Confirm Amount. Click OK if N" + amount + " is the correct amount.")
-   if(yu){
-     this.form.submit();
-     this.disabled=true;
-     this.value='Processing...'
-   }else{
-     e.preventDefault()
-     //this.value='Me...'
-    //  window.history.back();
-   }
+  $('#ty').submit(function () {
+      var amount = Math.abs($('#amount3').val());
+        msg = "Confirm Amount.Click Ok if ₦"+amount+' is the correct Amount';
 
+      if (msg != null) {
+        msg = msg + "\n\nDo you want to continue?";
+        if (confirm(msg)) return true;
+        else return false;
+      }
+
+      return true;
   });
-  $('.submiit').click(function (e) {
-    var amount = Math.abs(tt.value)*1;
-   var yu=confirm("Confirm Amount.Pushing N"+ amount +" to Main Account")
-   if(yu){
-     this.form.submit();
-     this.disabled=true;
-     this.value='Processing...'
-   }else{
-     e.preventDefault()
-     //this.value='Me...'
-    //  window.history.back();
-   }
+  //--------------------------------
+  $('#tyo').submit(function () {
+      var amount = Math.abs($('#amount4').val());
+        msg = "Confirm Amount.Pushing N"+ amount +" to Main Account";
 
+      if (msg != null) {
+        msg = msg + "\n\nDo you want to continue?";
+        if (confirm(msg)) return true;
+        else return false;
+      }
+
+      return true;
   });
-
   </script>
   <script type="text/javascript">
   $(".yy").keyup(function() {

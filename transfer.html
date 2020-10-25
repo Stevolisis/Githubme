@@ -53,16 +53,18 @@
   <center>
   <!--<button id="slidetog">Fund with Card</button>-->
 <br>
-<div id="box1"><form id="ty" action="/transfer" method="post">
+<div id="box1">
+  <form id="ty" action="/transfer" method="post">
   <p id="p">Reciever's Username</p>
 <input type="text" name="Reciever" placeholder=""
-id="amount" class="phone" required="required">
+id="amount2" class="phone" required="required">
 <p>Amount</p>
 <input type="number" name="amount" placeholder="Amount to Send"
 id="amount" class="phonez" required="required">
 
 <input type="submit"  class="submit" value="Submit">
-</form></div>
+</form>
+</div>
 
   <!--<img src="badge.png" alt="">-->
 </center>
@@ -73,22 +75,19 @@ id="amount" class="phonez" required="required">
     </footer>
   </div>
   <script>
-  let phonez=document.querySelector('.phonez');
-  let phone=document.querySelector('.phone');
-  $('.submit').click(function (e) {
-    var amount = Math.abs(phonez.value);
-   var yu=confirm("Confirm. Sending N"+ amount + " to "+phone.value);
-   if(yu){
-     this.form.submit();
-     this.disabled=true;
-     this.value='Processing...'
-   }else{
-     e.preventDefault()
-     //this.value='Me...'
-    //  window.history.back();
-   }
+  $('#ty').submit(function (e) {
+      var amount = Math.abs($('#amount').val());
+      var Reciever = $('#amount2').val();
+        msg = "Confirm Amount transfer of ₦"+amount+' to '+ Reciever;
+
+      if (msg != null) {
+        msg = msg + "\n\nDo you want to continue?";
+        if (confirm(msg)) return true;
+        else return false;
+      }
+
+      return true;
   });
   </script>
-  <script src="transfer.js"> </script>
   </body>
 </html>

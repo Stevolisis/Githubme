@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <meta name="viewport"
   content="width-device-width,initial-scale=1.0">
 <title>Sidebar Dashboard Template</title>
@@ -78,14 +79,14 @@ AIRTIME TOPUP<hr>
   var selectednetwork = $(this).val();
    if (selectednetwork == "MTN|1|0.98") {
      $("#yy").keyup(function() {
-       $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+       $(".form-control3").text('₦' + (Math.abs($("#yy").val()) * 0.98));
        // $("#discount").text('   (2% Discount)');
      });
 
    }else if (selectednetwork == "AIRTEL|4|0.98") {
 $('form button[type="submit"]').prop("disabled", false);
 $("#yy").keyup(function() {
-  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+  $(".form-control3").text('₦' + (Math.abs($("#yy").val()) * 0.98));
   //$("#discount").text('   (2% Discount)');
 
 
@@ -93,7 +94,7 @@ $("#yy").keyup(function() {
 
 } else if (selectednetwork == "GLO|2|0.95") {
 $("#yy").keyup(function() {
-  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.95));
+  $(".form-control3").text('₦' + (Math.abs($("#yy").val()) * 0.95));
   // $("#discount").text('   (2% Discount)');
 
 
@@ -101,7 +102,7 @@ $("#yy").keyup(function() {
 
 } else if (selectednetwork == "9MOBILE|3|0.98") {
 $("#yy").keyup(function() {
-  $(".form-control3").text('#' + (Number($("#yy").val()) * 0.98));
+  $(".form-control3").text('₦' + (Math.abs($("#yy").val()) * 0.98));
   // $("#discount").text('   (2% Discount)');
 
 
@@ -111,22 +112,20 @@ $("#yy").keyup(function() {
 });
     </script>
     <script>
-    let phonez=document.querySelector('#uop');
-    let databundl=document.querySelector('#yy');
-    let databndle=document.querySelector('#rr');
-    let network=document.querySelector('.form-control2');
-    $('.submit').click(function (e) {
-      var amount = Math.abs(databundl.value);
-     var yu=confirm("Confirm.Purchase of " +'N'+ amount + " airtime to "+phonez.value);
-     if(yu){
-       this.form.submit();
-       this.disabled=true;
-       this.value='Processing...'
-     }else{
-       e.preventDefault()
-       //this.value='Me...'
-      //  window.history.back();
-     }
+    $('#ty').submit(function (e) {
+
+        var amount = Math.abs($('#yy').val());
+        var phone = $('#uop').val();
+          msg = "Confirm Purchase of ₦"+amount+' Airtime to '+phone;
+
+
+        if (msg != null) {
+          msg = msg + "\n\nDo you want to continue?";
+          if (confirm(msg)) return true;
+          else return false;
+        }
+
+        return true;
     });
     </script>
     <footer id="bn">

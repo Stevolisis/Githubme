@@ -42,7 +42,7 @@ content="width-device-width,initial-scale=1.0">
         <span>NOTE:</span>To Widraw/transfer,you must have a
         minimum of N150 in your main Account.<br>
         *You can Only Withdraw N100 and Above.<br><hr>
-        You will be charged N30 for every Withdraw/transfer<br>
+        You will be charged N100 for every Withdraw/transfer<br>
         <hr>
         *To withdraw Referral Bonuses you must push them to your main Account.Then use the withdraw/transfer box to withdraw.
       </div>
@@ -114,7 +114,7 @@ id="amount3" required="required" class="yy">
   </div>
   <script>
   $('#ty').submit(function () {
-      var amount = Math.abs($('#amount3').val())+30;
+      var amount = Math.abs($('#amount3').val())+100;
         msg = "Confirm Amount.Click Ok if ₦"+amount+' is the correct Amount';
 
       if (msg != null) {
@@ -141,7 +141,7 @@ id="amount3" required="required" class="yy">
   </script>
   <script type="text/javascript">
   $(".yy").keyup(function() {
-        $(".rr").text('#' + (Number($(".yy").val()) +30));
+        $(".rr").text('₦' + (Number($(".yy").val()) +100));
         // $("#discount").text('   (2% Discount)');
       });
   </script>

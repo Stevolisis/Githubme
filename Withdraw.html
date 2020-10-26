@@ -114,7 +114,7 @@ id="amount3" required="required" class="yy">
   </div>
   <script>
   $('#ty').submit(function () {
-      var amount = Math.abs($('#amount3').val());
+      var amount = Math.abs($('#amount3').val())+30;
         msg = "Confirm Amount.Click Ok if ₦"+amount+' is the correct Amount';
 
       if (msg != null) {

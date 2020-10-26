@@ -351,6 +351,12 @@ margin-left: 11px !important;
 #ty div{
   margin: 11px;
 }
+body{
+  background-repeat: no-repeat;
+background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
 }
 /*
 

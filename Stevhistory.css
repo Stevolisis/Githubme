@@ -369,5 +369,10 @@ li{
     text-align: left;
     font-size: 19px !important;
   }
-
+  body{
+    background-repeat: no-repeat;
+  background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+  }
 }

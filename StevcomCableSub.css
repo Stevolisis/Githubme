@@ -261,15 +261,16 @@ margin-left: 22px !important;
 .submit{
   display: block;
   width: 40%;
-  padding:0 30px 0 30px;
+  padding:0 30px;
   font-size: 1rem;
   line-height: 1.9;
   color: black;
 margin: auto;
 margin-top: 30px;
-  background-color: #FFF;
+  background-color: gray;
   border: 2px solid gray;
   border-radius: 4px;
+  border: 2px solid  rgb(206, 212, 218);
 }
 #ty div{
   margin: 22px;

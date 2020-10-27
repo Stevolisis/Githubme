@@ -100,6 +100,57 @@ $('#ty').submit(function (e) {
     return true;
 });
 </script>
+<script type="text/javascript">
+var mtnPrefixes = ["0703","0706","0803","0806","0810","0813","0814","0816","0903","0906","0704","07025","07026"];
+var gloPrefixes = ["0705","0805","0807","0811","0815","0905"];
+var airtelPrefixes = ["0701","0708","0802","0808","0812","0902","0907","0904"];
+var _9MobilePrefixes = ["0809","0817","0818","0909","0908"];
+
+$('#ty').on('submit', function() {
+
+  var network = $('#slct1').val();
+  var phone = $('#uop').val();
+//------------------------------------------
+
+  if(network == null || network.length == 0
+      || phone == null || phone.length == 0){
+    alert('Enter receiver phone number and select network');
+    return false;
+  }
+
+  var prefix = phone.substr(0, 4);
+  var prefix4 = phone.substr(0, 5);
+
+  var msg = null;
+  if(network == 'MTN|1'){
+    if(mtnPrefixes.indexOf(prefix) == -1 && mtnPrefixes.indexOf(prefix4) == -1){
+      msg = "This phone number "+phone+" doesn't look like an MTN number.";
+    }
+  }else if(network == 'GLO|2'){
+    if(gloPrefixes.indexOf(prefix) == -1){
+      msg = "This phone number "+phone+" doesn't look like a Glo number.";
+    }
+  }else if(network == 'AIRTEL|3'){
+    if(airtelPrefixes.indexOf(prefix) == -1){
+      msg = "This phone number "+phone+" doesn't look like an Airtel number.";
+    }
+  }else if(network == "9MOBILE|7"){
+    if(airtelPrefixes.indexOf(prefix) == -1){
+      msg = "This phone number "+phone+" doesn't look like a 9Mobile number.";
+    }
+  }else{
+    msg = "Invalid network selected";
+  }
+
+  if(msg != null) {
+    if(alert(msg)) return false;
+    else return false;
+  }
+
+  return true;
+
+});
+</script>
         <script  src="StevcomDataOrder.js"></script>
   </body>
   </html>

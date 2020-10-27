@@ -161,7 +161,7 @@ $("#yy").keyup(function() {
           msg = "This phone number "+phone+" doesn't look like an Airtel number.";
         }
       }else if(network == "9MOBILE|3|0.98"){
-        if(airtelPrefixes.indexOf(prefix) == -1){
+        if(_9MobilePrefixes.indexOf(prefix) == -1){
           msg = "This phone number "+phone+" doesn't look like a 9Mobile number.";
         }
       }else{
